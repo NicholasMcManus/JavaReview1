@@ -15,12 +15,16 @@ public class FanApplication {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Fan fan1 = new Fan();
+        //declare variables
+        Fan fan1 = new Fan(10, "Yellow", Fan.FAST, true);
+        Fan fan2 = new Fan();
         
-        System.out.println(fan1);
+        //Modify objects
+        fan2.setFanSpeed(Fan.MEDIUM);
         
-        fan1.setOn(true);
+        //Display Information
         System.out.println(fan1);
+        System.out.println(fan2);
     }
 
 }
