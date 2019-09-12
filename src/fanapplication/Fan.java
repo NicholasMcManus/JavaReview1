@@ -10,7 +10,7 @@
 
 package fanapplication;
 
-public class fan {
+public class Fan {
     final public static int SLOW = 1,
             MEDIUM = 2,
             FAST = 3;
@@ -20,7 +20,7 @@ public class fan {
     private double radius;
     private String color;
     
-    public fan()
+    public Fan()
     {
         fanSpeed = this.SLOW;
         isOn = false;
@@ -28,7 +28,7 @@ public class fan {
         color = "Blue";
     }
     
-    public fan(double radius, String color, int fanSpeed, boolean isOn)
+    public Fan(double radius, String color, int fanSpeed, boolean isOn)
     {
         this.fanSpeed = fanSpeed;
         this.isOn = isOn;
