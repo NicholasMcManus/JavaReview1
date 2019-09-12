@@ -35,5 +35,49 @@ public class fan {
         this.radius = radius;
         this.color = color;
     }
+
+    public int getFanSpeed() {
+        return fanSpeed;
+    }
+
+    public void setFanSpeed(int fanSpeed) {
+        this.fanSpeed = fanSpeed;
+    }
+
+    public boolean isIsOn() {
+        return isOn;
+    }
+
+    public void setIsOn(boolean isOn) {
+        this.isOn = isOn;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        String output = "Color:" + color + " Radius: " + radius;
+        
+        if(isOn)
+            output = "Fan Speed: " + fanSpeed +  output;
+        else
+            output = "Fan " + output + " Fan is Off";
+        
+        return output;
+    }
     
 }
