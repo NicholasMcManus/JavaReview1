@@ -44,11 +44,11 @@ public class Fan {
         this.fanSpeed = fanSpeed;
     }
 
-    public boolean isIsOn() {
+    public boolean isOn() {
         return isOn;
     }
 
-    public void setIsOn(boolean isOn) {
+    public void setOn(boolean isOn) {
         this.isOn = isOn;
     }
 

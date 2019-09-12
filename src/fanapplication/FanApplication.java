@@ -15,7 +15,12 @@ public class FanApplication {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Fan fan1 = new Fan();
+        
+        System.out.println(fan1);
+        
+        fan1.setOn(true);
+        System.out.println(fan1);
     }
 
 }
