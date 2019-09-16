@@ -11,15 +11,19 @@
 package fanapplication;
 
 public class Fan {
+    //Create default speed profiles
     final public static int SLOW = 1,
             MEDIUM = 2,
             FAST = 3;
     
+    //Declare internal variables
     private int fanSpeed;
     private boolean isOn;
     private double radius;
     private String color;
     
+    //Constructors
+    //Default Constructor
     public Fan()
     {
         fanSpeed = this.SLOW;
@@ -28,19 +32,23 @@ public class Fan {
         color = "Blue";
     }
     
+    //Explicit Constructor
     public Fan(double radius, String color, int fanSpeed, boolean isOn)
     {
+        //Check for valid FanSpeed
         this.fanSpeed = fanSpeed;
         this.isOn = isOn;
         this.radius = radius;
         this.color = color;
     }
 
+    //Getters and setters
     public int getFanSpeed() {
         return fanSpeed;
     }
 
     public void setFanSpeed(int fanSpeed) {
+        //Check for Valid FanSpeed
         this.fanSpeed = fanSpeed;
     }
 
@@ -68,6 +76,7 @@ public class Fan {
         this.color = color;
     }
 
+    //Override ToString method
     @Override
     public String toString() {
         String output = "Color:" + color + " Radius: " + radius;
