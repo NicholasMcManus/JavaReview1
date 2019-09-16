@@ -2,9 +2,8 @@
  * file name: FanApplication.java
  * programmer name: Nick McManus
  * date created: 09-11-2019
- * date of last revision: 9-**-2019
- * details of last revision: Waiting for object to finish
- * short description: Exist to be a test function for the fan class
+ * date of last revision: 9-16-2019
+ * details of last revision: Check to make sure the speedCheck works
  */
 
 package fanapplication;

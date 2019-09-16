@@ -2,8 +2,8 @@
  * file name: fan.java
  * programmer name: Nick McManus
  * date created: 09-12-2019
- * date of last revision: 9-12-2019
- * details of last revision: TBD
+ * date of last revision: 9-16-2019
+ * details of last revision: Add fan speed checking and comments
  * short description: Create a fan object which emulates
  *                      the function of a fan.
  */
@@ -93,8 +93,11 @@ public class Fan {
     //Override ToString method
     @Override
     public String toString() {
+        //Base Text
         String output = "Color: " + color + ", Radius: " + radius;
         
+        //If the fan is on display the speed before color
+        //Otherwise append the object type and inform that the fan is off
         if(isOn)
             output = "Fan Speed: " + fanSpeed + ", " +  output;
         else
