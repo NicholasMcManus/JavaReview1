@@ -37,11 +37,24 @@ public class Fan {
     {
         //Check for valid FanSpeed
         this.fanSpeed = fanSpeed;
+        fanSpeedCheck();
         this.isOn = isOn;
         this.radius = radius;
         this.color = color;
     }
 
+    //Make sure the fan speed is valid and logical (non-negative and in range)
+    private void fanSpeedCheck()
+    {
+        //If the fan speed is slower than slow make it slow
+        if(this.fanSpeed < SLOW)
+            this.fanSpeed = SLOW;
+        
+        //Otherwise if the fan speed is too high set the speed to high
+        else if(this.fanSpeed > FAST)
+            this.fanSpeed = FAST;
+    }
+    
     //Getters and setters
     public int getFanSpeed() {
         return fanSpeed;
@@ -50,6 +63,7 @@ public class Fan {
     public void setFanSpeed(int fanSpeed) {
         //Check for Valid FanSpeed
         this.fanSpeed = fanSpeed;
+        fanSpeedCheck();
     }
 
     public boolean isOn() {
@@ -79,12 +93,12 @@ public class Fan {
     //Override ToString method
     @Override
     public String toString() {
-        String output = "Color:" + color + " Radius: " + radius;
+        String output = "Color: " + color + ", Radius: " + radius;
         
         if(isOn)
-            output = "Fan Speed: " + fanSpeed +  output;
+            output = "Fan Speed: " + fanSpeed + ", " +  output;
         else
-            output = "Fan " + output + " Fan is Off";
+            output = "Fan " + output + ", Fan is Off";
         
         return output;
     }
