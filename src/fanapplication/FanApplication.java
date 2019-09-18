@@ -2,8 +2,8 @@
  * file name: FanApplication.java
  * programmer name: Nick McManus
  * date created: 09-11-2019
- * date of last revision: 9-16-2019
- * details of last revision: Check to make sure the speedCheck works
+ * date of last revision: 9-18-2019
+ * details of last revision: Make variables and setters closer to instructions
  */
 
 package fanapplication;
@@ -19,7 +19,7 @@ public class FanApplication {
         Fan fan2 = new Fan();
         
         //Modify objects
-        fan2.setFanSpeed(Fan.MEDIUM);
+        fan2.setSpeed(Fan.MEDIUM);
         
         //Display Information
         System.out.println(fan1);

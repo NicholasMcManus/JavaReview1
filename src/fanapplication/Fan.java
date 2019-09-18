@@ -2,8 +2,8 @@
  * file name: fan.java
  * programmer name: Nick McManus
  * date created: 09-12-2019
- * date of last revision: 9-16-2019
- * details of last revision: Add fan speed checking and comments
+ * date of last revision: 9-18-2019
+ * details of last revision: Changed variables and setters to be closer to instructions
  * short description: Create a fan object which emulates
  *                      the function of a fan.
  */
@@ -17,8 +17,8 @@ public class Fan {
             FAST = 3;
     
     //Declare internal variables
-    private int fanSpeed;
-    private boolean isOn;
+    private int speed;
+    private boolean on;
     private double radius;
     private String color;
     
@@ -26,19 +26,19 @@ public class Fan {
     //Default Constructor
     public Fan()
     {
-        fanSpeed = this.SLOW;
-        isOn = false;
+        speed = this.SLOW;
+        on = false;
         radius = 5;
-        color = "Blue";
+        color = "blue";
     }
     
     //Explicit Constructor
     public Fan(double radius, String color, int fanSpeed, boolean isOn)
     {
         //Check for valid FanSpeed
-        this.fanSpeed = fanSpeed;
+        this.speed = fanSpeed;
         fanSpeedCheck();
-        this.isOn = isOn;
+        this.on = isOn;
         this.radius = radius;
         this.color = color;
     }
@@ -47,31 +47,31 @@ public class Fan {
     private void fanSpeedCheck()
     {
         //If the fan speed is slower than slow make it slow
-        if(this.fanSpeed < SLOW)
-            this.fanSpeed = SLOW;
+        if(this.speed < SLOW)
+            this.speed = SLOW;
         
         //Otherwise if the fan speed is too high set the speed to high
-        else if(this.fanSpeed > FAST)
-            this.fanSpeed = FAST;
+        else if(this.speed > FAST)
+            this.speed = FAST;
     }
     
     //Getters and setters
-    public int getFanSpeed() {
-        return fanSpeed;
+    public int getSpeed() {
+        return speed;
     }
 
-    public void setFanSpeed(int fanSpeed) {
+    public void setSpeed(int speed) {
         //Check for Valid FanSpeed
-        this.fanSpeed = fanSpeed;
+        this.speed = speed;
         fanSpeedCheck();
     }
 
     public boolean isOn() {
-        return isOn;
+        return on;
     }
 
-    public void setOn(boolean isOn) {
-        this.isOn = isOn;
+    public void setOn(boolean on) {
+        this.on = on;
     }
 
     public double getRadius() {
@@ -98,8 +98,8 @@ public class Fan {
         
         //If the fan is on display the speed before color
         //Otherwise append the object type and inform that the fan is off
-        if(isOn)
-            output = "Fan Speed: " + fanSpeed + ", " +  output;
+        if(on)
+            output = "Fan Speed: " + speed + ", " +  output;
         else
             output = "Fan " + output + ", Fan is Off";
         
